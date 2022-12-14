@@ -1,2 +1,4 @@
 site_name: Thales Docs
 
+theme:
+  name: bootstrap386

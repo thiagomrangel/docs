@@ -9,3 +9,7 @@ recomendo que tente fazer o mesmo. Fico aberto a sugestões e críticas quanto a
 Caso deseje me contatar, meus contatos estão no rodapé desta página.
 
 Do mais, espero que algum conteúdo aqui contido lhe ajude em sua jornada!
+
+<div align="right">
+<p>Grande Abraço!<br>Thiago Rangel</p>
+</div>

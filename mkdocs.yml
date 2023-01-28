@@ -1,8 +1,16 @@
 site_name: My Docs - Thiago Rangel
 
 nav:
-  - Home: index.md
-  - About: about.md
+  - Sobre: index.md
+  - Estudos para Certificações:
+    - LPIC1:
+      - lpic1.md
+    - CCNA:
+      - ccna.md
+    - HCIP:
+      - hcip.md
+  - Estudos e Desenvolvimentos Livres:
+    - 404.md
 
 theme:
   name: material
@@ -29,6 +37,7 @@ theme:
     - navigation.top
     - header.autohide
     - navigation.footer
+    - navigation.tabs
 
 extra:
   social:

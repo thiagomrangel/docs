@@ -1,17 +1,11 @@
-# Welcome to MkDocs
+# Bem Vindo ao **My Docs - Thiago Rangel**
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+Este é um projeto pessoal de documentação técnica, com o objetivo de registrar todos os meus estudos.
 
-## Commands
+Atualmente sou Analista de Redes em um ISP e, para mim, a melhor forma de guardar o conhecimento é o
+organizando para repassá-lo a outras pessoas,
+recomendo que tente fazer o mesmo. Fico aberto a sugestões e críticas quanto a página.
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+Caso deseje me contatar, meus contatos estão no rodapé desta página.
 
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+Do mais, espero que algum conteúdo aqui contido lhe ajude em sua jornada!

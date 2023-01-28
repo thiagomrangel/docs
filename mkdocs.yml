@@ -1,6 +1,41 @@
 site_name: My Docs - Thiago Rangel
+
 nav:
-    - Home: index.md
-    - About: about.md
+  - Home: index.md
+  - About: about.md
+
 theme:
-      name: material
+  name: material
+  language: pt-BR
+  palette:
+
+    # Palette toggle for light mode
+    - primary: deep purple
+      media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - primary: deep purple
+      media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+  features:
+    - navigation.top
+    - header.autohide
+    - navigation.footer
+
+extra:
+  social:
+    - icon: fontawesome/brands/linkedin
+      link: http://www.linkedin.com/in/thiagomendesrangel
+    - icon: fontawesome/solid/paper-plane
+      link: mailto:thiagorangel19@gmail.com
+
+copyright: Copyright &copy; 2023 - 2023 Thiago Mendes Rangel
+

@@ -2,8 +2,8 @@
 
 Este é um projeto pessoal de documentação técnica, com o objetivo de registrar todos os meus estudos.
 
-Atualmente sou Analista de Redes em um ISP e, para mim, a melhor forma de guardar o conhecimento é o
-organizando para repassá-lo a outras pessoas,
+Atualmente sou Analista de Redes em um ISP e, para mim, a melhor forma de reter o conhecimento é
+organizá-lo para repassar a outras pessoas,
 recomendo que tente fazer o mesmo. Fico aberto a sugestões e críticas quanto a página.
 
 Caso deseje me contatar, meus contatos estão no rodapé desta página.

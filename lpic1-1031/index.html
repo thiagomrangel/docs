@@ -70,6 +70,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#1031-trabalhar-na-linha-de-comando" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -362,10 +367,78 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          103.1 - Trabalhar na linha de comando
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         103.1 - Trabalhar na linha de comando
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#aula-1-shell-bash-echo-type-path" class="md-nav__link">
+    Aula 1 - Shell, bash, echo, type, PATH
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aula-2-variaveis-de-ambiente" class="md-nav__link">
+    Aula 2 - Variáveis de Ambiente
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aula-3-comandos-sequenciais-history-man" class="md-nav__link">
+    Aula 3 - Comandos Sequenciais, history, man
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aula-4-uname-alias" class="md-nav__link">
+    Aula 4 - uname, alias
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aula-5-which" class="md-nav__link">
+    Aula 5 - which
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aula-6-quoting" class="md-nav__link">
+    Aula 6 - Quoting
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -645,6 +718,58 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#aula-1-shell-bash-echo-type-path" class="md-nav__link">
+    Aula 1 - Shell, bash, echo, type, PATH
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aula-2-variaveis-de-ambiente" class="md-nav__link">
+    Aula 2 - Variáveis de Ambiente
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aula-3-comandos-sequenciais-history-man" class="md-nav__link">
+    Aula 3 - Comandos Sequenciais, history, man
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aula-4-uname-alias" class="md-nav__link">
+    Aula 4 - uname, alias
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aula-5-which" class="md-nav__link">
+    Aula 5 - which
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aula-6-quoting" class="md-nav__link">
+    Aula 6 - Quoting
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -660,7 +785,132 @@
 
 
 
-
+<h1 id="1031-trabalhar-na-linha-de-comando">103.1 - Trabalhar na Linha de Comando</h1>
+<h2 id="aula-1-shell-bash-echo-type-path">Aula 1 - Shell, bash, echo, type, PATH</h2>
+<ul>
+<li>Shell - interface de linha de comando para o usuário<ul>
+<li>echo $SHELL (variável de ambiente)</li>
+<li>Mudar para o bash - digitar bash</li>
+</ul>
+</li>
+<li>type - mostra se o comando é interno ou externo - type cd</li>
+<li>echo $PATH (variável de ambiente) - mostra os diretórios que o bash vai consultar para achar os comandos externos</li>
+<li>Caminho absoluto - desde o /<ul>
+<li>caminho relativo - a partir do diretório atual</li>
+</ul>
+</li>
+<li>Também é possivel mostrar um variável com o comando echo ${variavel} - Parameter Expansion</li>
+<li>set -x - exibe o comando completo antes de executá-lo<ul>
+<li>set +x para sair</li>
+</ul>
+</li>
+<li>set -a - todas as variáveis declaradas serão exportadas<ul>
+<li>set +a para sair</li>
+</ul>
+</li>
+<li>env -u - faz o unset da variável no momento da execução<ul>
+<li>env -u ./teste.sh</li>
+</ul>
+</li>
+<li>declare -x - faz com q a variável seja exportada (como o export)<ul>
+<li>declare +x VAR=lpi</li>
+<li>env|grep VAR (mostra a variável exportada)</li>
+</ul>
+</li>
+</ul>
+<h2 id="aula-2-variaveis-de-ambiente">Aula 2 - Variáveis de Ambiente</h2>
+<ul>
+<li>NOME_VARIAVEL=valor - declara a variável localmente<ul>
+<li>echo $NOME_VARIAVEL</li>
+</ul>
+</li>
+<li>export VARIÁVEL - exporta a variável - funciona para processos filhos desse bash que exportou a var</li>
+<li>bash - entra em uma nova estância do bash</li>
+<li>set - mostra todas as variáveis</li>
+<li>env - mostra apenas variáveis globais<ul>
+<li>type set e type env - set é interno e env é externo</li>
+</ul>
+</li>
+<li>env TESTE=Windows ./Teste.sh - muda o valor de TESTE somente para essa execução</li>
+<li>unset variável - remove a variável</li>
+<li>
+<p>Variáveis de ambiente:</p>
+<ul>
+<li>HISTFILE-/home/lpi1/.bash_history - mostra o diretório para o histórico de comandos</li>
+<li>HISTFILESIZE - tamanho máximo do arquivo</li>
+<li>HISTSIZE - tamanho máximo de linhas do arquivo</li>
+<li>HOME - diretório home do meu usuário local</li>
+<li>LOGNAME - nome do usuário q fez login</li>
+<li>PWD - guarda o diretório atual</li>
+<li>TERM - qual meu terminal</li>
+<li>USER - igual LOGNAME</li>
+</ul>
+</li>
+<li>
+<p>DISPLAY: Indica às aplicações gráficas onde as janelas deverão ser exibidas. Será estudado no Tópico 106.</p>
+</li>
+<li>HISTFILE: Arquivo do histórico de comandos</li>
+<li>HISTFILESIZE: Quantidade de linhas/comandos armazenados no arquivo de histórico</li>
+<li>HOME: Indica o diretório do usuário atual</li>
+<li>LOGNAME e USER: Nome do usuário atual</li>
+<li>PATH: Diretórios em que o Linux irá procurar por arquivos executáveis</li>
+<li>PS1: Aparência do prompt do shell.</li>
+<li>PWD: Diretório atual</li>
+<li>
+<p>OLDPWD: Diretório anterior</p>
+</li>
+<li>
+<p>echo $$ - pid do processo atual</p>
+</li>
+<li>echo $! - último processo q executei em background</li>
+<li>top &amp; - roda o top em background</li>
+<li>echo $? - estado do resultado do último comando - 0 é sucesso - qualquer valor diferente é erro</li>
+<li>echo ~ - home do usuário local</li>
+<li>echo ~root - retorna o home do usuário root</li>
+<li>cd ~ - me manda para o home do usuário atual</li>
+</ul>
+<h2 id="aula-3-comandos-sequenciais-history-man">Aula 3 - Comandos Sequenciais, history, man</h2>
+<ul>
+<li>; - executa os comandos em sequêcia sempre - date ; ls ; echo batata</li>
+<li>&amp;&amp; - executa os comandos em sequência se o anterior funcionar - date &amp;&amp; ls &amp;&amp; echo linux</li>
+<li>|| - só executa o segundo comando se o primeiro falhar - date || ls || echo</li>
+<li>history - mostra os últimos comandos, cada usuário tem o seu</li>
+<li>!! - executa o último comando</li>
+<li>!19 - executa o comando por número do history</li>
+<li>!string - executa o último comando com essa string</li>
+<li>history -c - limpa o arquivo de histórico</li>
+<li>set | grep HISTFILE - o arquivo de histórico</li>
+<li>o arquivo de histórico é salvo toda vez q a sessão é fechada</li>
+<li>ctrl +r - procura por um comando no histórico de comandos</li>
+<li>man ls - manual de referência do comando<ul>
+<li>comando interno não tem man, tem q usar o man bash</li>
+</ul>
+</li>
+<li>info - man reduzido</li>
+<li>man -k “system information” - tras todos os comandos que tem a string no man</li>
+<li>whatis tar - o que é o comando, descrição</li>
+<li>apropos - igual o man -k</li>
+</ul>
+<h2 id="aula-4-uname-alias">Aula 4 - uname, alias</h2>
+<ul>
+<li>uname - imprime informações do sistema</li>
+<li>uname -a - imprime todas as informações do sistema</li>
+<li>uname -r - versão do kernel</li>
+<li>uname -n - mostra o hostname da máquina</li>
+<li>alias - mostra os apelidos para os comandos</li>
+<li>alias lt=’ls /tmp’ - cria o apelido</li>
+</ul>
+<h2 id="aula-5-which">Aula 5 - which</h2>
+<ul>
+<li>which echo - mostra o diretório de um comando de dentro do $PATH</li>
+</ul>
+<h2 id="aula-6-quoting">Aula 6 - Quoting</h2>
+<ul>
+<li>aspas duplas e simples - protegem a intepretação da string</li>
+<li>\ - protege o próximo caractere de ser interpretado</li>
+<li>aspas duplas - não protege o $, ` e \</li>
+<li>aspas simples - protege todos os caracteres</li>
+</ul>
 
 
 

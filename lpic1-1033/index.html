@@ -427,26 +427,86 @@
     cd, ls, file
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="cd, ls, file">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#cd" class="md-nav__link">
     cd
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#ls" class="md-nav__link">
     ls
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#file" class="md-nav__link">
     file
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#touch-cp-mv" class="md-nav__link">
+    touch, cp, mv
+  </a>
+  
+    <nav class="md-nav" aria-label="touch, cp, mv">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cp" class="md-nav__link">
+    cp
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mv" class="md-nav__link">
+    mv
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#touch" class="md-nav__link">
+    touch
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rm-mkdir-rmdir-find" class="md-nav__link">
+    rm, mkdir, rmdir, find
+  </a>
+  
+    <nav class="md-nav" aria-label="rm, mkdir, rmdir, find">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rm" class="md-nav__link">
+    rm
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -718,26 +778,86 @@
     cd, ls, file
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="cd, ls, file">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#cd" class="md-nav__link">
     cd
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#ls" class="md-nav__link">
     ls
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#file" class="md-nav__link">
     file
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#touch-cp-mv" class="md-nav__link">
+    touch, cp, mv
+  </a>
+  
+    <nav class="md-nav" aria-label="touch, cp, mv">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cp" class="md-nav__link">
+    cp
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mv" class="md-nav__link">
+    mv
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#touch" class="md-nav__link">
+    touch
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rm-mkdir-rmdir-find" class="md-nav__link">
+    rm, mkdir, rmdir, find
+  </a>
+  
+    <nav class="md-nav" aria-label="rm, mkdir, rmdir, find">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rm" class="md-nav__link">
+    rm
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -762,14 +882,14 @@
 <ul>
 <li><img alt="estrutura de diretórios" src="../2023-01-30_06-47.png" /></li>
 </ul>
-<h2 id="cd">cd</h2>
+<h3 id="cd">cd</h3>
 <ul>
 <li>cd - - volta para o diretório que eu estava</li>
 <li>cd ~ - volta para o home do meu usuário</li>
 <li>pwd - diretório que estou</li>
 <li>cd ../.. - volta 2 diretórios</li>
 </ul>
-<h2 id="ls">ls</h2>
+<h3 id="ls">ls</h3>
 <ul>
 <li>ls -a - mostra diretórios ocultos</li>
 <li>ls -l - lista detalhada dos arquivos<ul>
@@ -787,9 +907,49 @@
 </ul>
 </li>
 </ul>
-<h2 id="file">file</h2>
+<h3 id="file">file</h3>
 <ul>
 <li>file alunos.txt - mostra o tipo do arquivo</li>
+</ul>
+<h2 id="touch-cp-mv">touch, cp, mv</h2>
+<h3 id="cp">cp</h3>
+<ul>
+<li>cp -opcoes origem destino</li>
+<li>cp -v alunos* /tmp/ - verbose, mostra todos os passos do processo</li>
+<li>cp -i - pergunta se vai sobrescresver um arquivo</li>
+<li>cp -r - recursivo, copiar diretórios</li>
+<li>cp -p - preservar as características do arquivo</li>
+<li>cp A B - copia o arquivo com um novo nome</li>
+</ul>
+<h3 id="mv">mv</h3>
+<ul>
+<li>mv teste /tmp - move o arquivo</li>
+<li>mv A B - renomeia o arquivo</li>
+</ul>
+<h3 id="touch">touch</h3>
+<ul>
+<li>touch linux.txt - cria o arquivo vazio</li>
+<li>ls -l - mostra a data da última alteração</li>
+<li>touch arquivo - atualiza a hora da última modificação do arquivo</li>
+<li>touch -a arquivo - altera a data do último acesso</li>
+<li>touch -m arquivo - altera a data da última modificação</li>
+<li>touch -t ANOMESDIAHORA - altera a data da última alteração</li>
+</ul>
+<h2 id="rm-mkdir-rmdir-find">rm, mkdir, rmdir, find</h2>
+<h3 id="rm">rm</h3>
+<ul>
+<li>rm arquivo - remove o arquivo</li>
+<li>rm -i arquivo - pede confirmação</li>
+<li>rm -v arquivo - mostra detalhes da remoção</li>
+<li>rm -r diretório - recursivo, remove diretórios</li>
+<li>rmdir diretório - remóve diretórios VAZIOS</li>
+<li>rmdir -p linux/ubuntu - apaga a estrutura inteira</li>
+<li>mkdir diretório - cria o diretório</li>
+<li>mkdir linux/ubuntu - cria um diretório dentro do outro</li>
+<li>mkdir -p (--parents) curso/lpi/versao1 - cria toda a estrutura de diretórios</li>
+<li>find /home -name aula - procurar no /home o arquivo</li>
+<li>find /home -user lpi2 -name aula</li>
+<li>find ./ -ctime -1 - mostra os arquivos a partir do diretório que eu estou que foram executados no máximo 1 dia antes</li>
 </ul>
 
 

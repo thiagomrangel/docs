@@ -510,6 +510,68 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#tar-gzip-bzip2-xz" class="md-nav__link">
+    tar, gzip, bzip2, xz
+  </a>
+  
+    <nav class="md-nav" aria-label="tar, gzip, bzip2, xz">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tar" class="md-nav__link">
+    tar
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gzip" class="md-nav__link">
+    gzip
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bzip2" class="md-nav__link">
+    bzip2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xz" class="md-nav__link">
+    xz
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#file_1" class="md-nav__link">
+    file
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cpio-dd" class="md-nav__link">
+    cpio, dd
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cpio" class="md-nav__link">
+    cpio
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -861,6 +923,68 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#tar-gzip-bzip2-xz" class="md-nav__link">
+    tar, gzip, bzip2, xz
+  </a>
+  
+    <nav class="md-nav" aria-label="tar, gzip, bzip2, xz">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tar" class="md-nav__link">
+    tar
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gzip" class="md-nav__link">
+    gzip
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bzip2" class="md-nav__link">
+    bzip2
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#xz" class="md-nav__link">
+    xz
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#file_1" class="md-nav__link">
+    file
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cpio-dd" class="md-nav__link">
+    cpio, dd
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cpio" class="md-nav__link">
+    cpio
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -950,6 +1074,65 @@
 <li>find /home -name aula - procurar no /home o arquivo</li>
 <li>find /home -user lpi2 -name aula</li>
 <li>find ./ -ctime -1 - mostra os arquivos a partir do diretório que eu estou que foram executados no máximo 1 dia antes</li>
+<li>-d - tipo de arquivo diretório</li>
+<li>-not nega o parâmetro seguinte, não deve existir</li>
+<li>mtime - tempo de modificação</li>
+<li>find /var/log/ -user ricardo -exec cp -r {} /home/lpi/logs_ricardo/ \;</li>
+</ul>
+<h2 id="tar-gzip-bzip2-xz">tar, gzip, bzip2, xz</h2>
+<h3 id="tar">tar</h3>
+<ul>
+<li>tar cpvf backup.tar novo* - só agrupa, não compacta</li>
+<li>c - criar</li>
+<li>f - definir o nome</li>
+<li>p - preservar preservar as permissões</li>
+<li>v - verbose</li>
+<li>t - listar</li>
+<li>z - gzip</li>
+<li>j - gzip2</li>
+<li>J - xz</li>
+<li>x - descompactar</li>
+</ul>
+<h3 id="gzip">gzip</h3>
+<ul>
+<li>gzip backup.tar - remove o arquivo original e compacta</li>
+<li>k - manter o original</li>
+<li>gunzip backup.tar.gz - remove o arquivo compactado e descompacta</li>
+</ul>
+<h3 id="bzip2">bzip2</h3>
+<ul>
+<li>bzip2 -k backup.tar</li>
+<li>d - descompactar</li>
+<li>bunzip backup.tar.bz2</li>
+</ul>
+<h3 id="xz">xz</h3>
+<ul>
+<li>xz -k arquivo.tar</li>
+<li>unxz ou xz -d</li>
+</ul>
+<h3 id="file_1">file</h3>
+<ul>
+<li>file arquivo.tgz - mostra as propriedades da compactação</li>
+</ul>
+<h2 id="cpio-dd">cpio, dd</h2>
+<h2 id="cpio">cpio</h2>
+<ul>
+<li>agrupa uma lista de arquivos</li>
+<li>find ./ -name "novo*" | cpio -o &gt; backup.cpio</li>
+<li>o - cria o arquivo</li>
+<li>find ./ -name "novo*" | cpio -o | gzip &gt; backup.cpio.gz</li>
+<li>compacta</li>
+<li>cpio -i &lt; backup.cpio</li>
+<li>desagrupa o arquivo</li>
+<li>d - cria a árvore de diretórios</li>
+<li>gunzip -c backup.cpio.gz | cpio -i</li>
+<li>descompactar o arquivo
+  ## dd</li>
+<li>copiar uma partição inteira<ul>
+<li>dd if=/dev/sr0  of=image.img</li>
+<li>cria um arquivo de imagem, copia byte a byte</li>
+</ul>
+</li>
 </ul>
 
 

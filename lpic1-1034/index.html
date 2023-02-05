@@ -70,6 +70,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#fluxos-pipes-e-redirecionamentos" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -404,10 +409,57 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          103.4 - Fluxos, pipes (canalização) e redirecionamentos de saída
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         103.4 - Fluxos, pipes (canalização) e redirecionamentos de saída
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#redir-entradasaidaerro-pipe" class="md-nav__link">
+    Redir entrada/saida/erro, | (pipe)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tee-xargs-subcomandos" class="md-nav__link">
+    tee, xargs, subcomandos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#outros-redirecionamentos" class="md-nav__link">
+    Outros Redirecionamentos
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -645,6 +697,37 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#redir-entradasaidaerro-pipe" class="md-nav__link">
+    Redir entrada/saida/erro, | (pipe)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tee-xargs-subcomandos" class="md-nav__link">
+    tee, xargs, subcomandos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#outros-redirecionamentos" class="md-nav__link">
+    Outros Redirecionamentos
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -660,7 +743,47 @@
 
 
 
-
+<h1 id="fluxos-pipes-e-redirecionamentos">Fluxos, Pipes e Redirecionamentos</h1>
+<h2 id="redir-entradasaidaerro-pipe">Redir entrada/saida/erro, | (pipe)</h2>
+<p><img alt="Alt text" src="../2023-02-04_18-19.png" /></p>
+<ul>
+<li>> - redireciona a saída do arquivo, se o arquivo não existir ele o cria, se existir ele sobrescreve o conteúdo</li>
+<li>>&gt; - redireciona a saída do arquivo, adiciona ao final do arquivo, append</li>
+<li>> = 1&gt;</li>
+<li>>&gt; = 1&gt;&gt; - 1 significa saída do comando com êxito</li>
+<li>2&gt; ou 2&gt;&gt; - redireciona a saída com erro</li>
+<li>ls -l {Aula,AULA}3 &gt; saidals.out 2&gt; saida-ls-erro.out</li>
+<li>ls -l {Aula,AULA}3 &gt; saidals.out 2&gt;&amp;1 - redireciona as duas saídas para o msm arquivo</li>
+<li>NÃO FUNCIONA - sort teste.txt &gt; teste.txt - primeiro o shell cria o arquivo de destino, portanto sobrescreve o primeiro e a leitura é feita em um arquivo em branco. É necessário usar um arquivo temporário</li>
+<li>| (pipe) - canalização</li>
+</ul>
+<h2 id="tee-xargs-subcomandos">tee, xargs, subcomandos</h2>
+<ul>
+<li>tee - redireciona a saída para um arquivo e mostra na tela</li>
+<li>ls -l /tmp | tee arquivo.log</li>
+<li>xargs - redireciona linha a linha a saída de um comando para outro</li>
+<li>find /home -name "Aula3*" | xargs ls -l</li>
+<li>`` e $() - executa primeiro o comando</li>
+<li>echo "A versão do Kernel é" $(uname -r)</li>
+</ul>
+<h2 id="outros-redirecionamentos">Outros Redirecionamentos</h2>
+<ul>
+<li>&lt;&lt; - here document - redireciona o conteúdo até o seu fim ser informado
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>$<span class="w"> </span>tr<span class="w"> </span>a-z<span class="w"> </span>A-Z<span class="w"> </span><span class="s">&lt;&lt; final</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="s">&gt; Curso Preparatorio para Certificacao</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="s">&gt; lpic-1</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="s">&gt; final</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>CURSO<span class="w"> </span>PREPARATORIO<span class="w"> </span>PARA<span class="w"> </span>CERTIFICACAO
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>LPIC-1
+</code></pre></div></li>
+<li>&lt;&lt;&lt; - here string - redireciona o que vem em seguida como se fosse o conteúdo de um arquivo
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>$<span class="w"> </span>tr<span class="w"> </span>a-z<span class="w"> </span>A-Z<span class="w"> </span>&lt;<span class="w"> </span>teste.txt<span class="w"> </span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>bash:<span class="w"> </span>teste.txt:<span class="w"> </span>Arquivo<span class="w"> </span>ou<span class="w"> </span>diretório<span class="w"> </span>não<span class="w"> </span>encontrado
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>$<span class="w"> </span>tr<span class="w"> </span>a-z<span class="w"> </span>A-Z<span class="w"> </span><span class="o">&lt;&lt;&lt;</span><span class="w"> </span>teste.txt<span class="w"> </span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>TESTE.TXT
+</code></pre></div></li>
+</ul>
 
 
 

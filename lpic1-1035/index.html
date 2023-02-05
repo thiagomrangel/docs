@@ -70,6 +70,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#criar-monitorar-e-encerrar-processos" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -418,10 +423,78 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          103.5 - Criar, monitorar e finalizar processos
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         103.5 - Criar, monitorar e finalizar processos
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#processos-ps-pstree-pgrep" class="md-nav__link">
+    Processos, ps, pstree, pgrep
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#top" class="md-nav__link">
+    top
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kill-killall-pkill" class="md-nav__link">
+    kill, killall, pkill
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uptime-free-screen" class="md-nav__link">
+    uptime, free, screen
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jobs-bg-fg-nohup" class="md-nav__link">
+    jobs, bg, fg, nohup
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#watch-tmux" class="md-nav__link">
+    watch, tmux
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -645,6 +718,58 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#processos-ps-pstree-pgrep" class="md-nav__link">
+    Processos, ps, pstree, pgrep
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#top" class="md-nav__link">
+    top
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kill-killall-pkill" class="md-nav__link">
+    kill, killall, pkill
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uptime-free-screen" class="md-nav__link">
+    uptime, free, screen
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jobs-bg-fg-nohup" class="md-nav__link">
+    jobs, bg, fg, nohup
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#watch-tmux" class="md-nav__link">
+    watch, tmux
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -660,7 +785,126 @@
 
 
 
-
+<h1 id="criar-monitorar-e-encerrar-processos">Criar, Monitorar e Encerrar Processos</h1>
+<h2 id="processos-ps-pstree-pgrep">Processos, ps, pstree, pgrep</h2>
+<ul>
+<li>PID = Process ID</li>
+<li>PPID - Parent Process ID</li>
+<li>Primeiro processo iniciado no Linux - init - sempre é o processo 1</li>
+<li>ps - estados dos processos da máquina. Aceita as opções do UNIX, BSD e GNU.</li>
+<li>ps - mostra os processos do meu usuário em execução neste terminal<ul>
+<li>pts/7 - conectado por interface gráfica e aberto o terminal</li>
+</ul>
+</li>
+<li>ps -u  - modo de execução do usuário</li>
+<li>ps -ux - mostra mais processos, não só os iniciados pelo meu tty atual, mas só do meu usuário atual</li>
+<li>ps -uxa - mostra os processos de todos os usuários</li>
+<li>ps -uxaf - mostra o parentesco dos processos</li>
+<li>ps u -C VBoxClient - mostra somente os processos do VBox</li>
+<li>pstree - mostra os processos em formato de árvore</li>
+<li>pstree -p - mostra os PIDs</li>
+<li>pgrep bash - mostra os IDs dos processos bash</li>
+<li>pgrep bash -u root - mostra o PID do bash do root</li>
+</ul>
+<h2 id="top">top</h2>
+<ul>
+<li>top - mostra informações gerais do sistema</li>
+<li>shift + M - ordena por quem está consumindo mais memória</li>
+<li>shift + P - processos por uso de CPU</li>
+<li>u - pergunta qual usuário vc quer</li>
+<li>r - qual o PID</li>
+<li>n - número máximo de processos a serem mostrados</li>
+<li>k - mata um processo</li>
+<li>? ou h - mostra todas as opções</li>
+<li>top -b - não é interativo, joga a informação na tela</li>
+<li>top -b -d3 -n3 - delay de 3 segundos de atualização, atualiza 3 vezes</li>
+</ul>
+<h2 id="kill-killall-pkill">kill, killall, pkill</h2>
+<ul>
+<li>kill - comando usado para enviar um sinal a um processo, não necessáriamente matá-lo</li>
+<li>kill -l - mostra todos os sinais q podemos enviar a um processo</li>
+<li>SIGHUP - inicia ou termina um processo ou faz com que o processo releia suas configurações</li>
+<li>SIGINT - interrompe um processo - CTRL + C</li>
+<li>SIGQUIT - fecha um processo</li>
+<li>SIGKILL - matar um processo, único sinal que nenhum processo pode ignorar</li>
+<li>SIGTERM - solicita ao processo que finalize - sinal padrão do kill</li>
+<li>kill 4441 - finaliza o processo 4441</li>
+<li>kill -s SIGKILL 4500 - envia o sigkill ao processo</li>
+<li>kill -s 9 4557 - 9 é o sigkill</li>
+<li>kill -9 4557</li>
+<li>kill -SIGKILL 4557</li>
+<li>killall firefox - mata todos os processos com o nome firefox</li>
+<li>killall httpd - mata tudo que for servidor web apache</li>
+<li>Um usuário comum só consegue finalizar seus próprios processos</li>
+<li>pkill firefox - mata o firefox</li>
+<li>pkill -1 firefox -u lpi1 - envia o sinal 1 ao firefox do usuário lpi1</li>
+<li>ADICIONAR IMAGEM DOS SINAIS</li>
+</ul>
+<h2 id="uptime-free-screen">uptime, free, screen</h2>
+<ul>
+<li>uptime - mostra o uptime da máquina</li>
+<li>free - mostra a quantidade de memória e de swap do sistema</li>
+<li>free -m - mostra em mega</li>
+<li>free -g - mostra em giga</li>
+<li>used - quanto ele vai utilizar no máximo, não quanto ele está utilizando</li>
+<li>screen - ferramenta para gerenciar e trabalhar em várias abas</li>
+<li>crtl + A + C - cria uma nova aba</li>
+<li>crtl + A + N - alterna para a próxima aba</li>
+<li>crtl + A + D - sai do screen, mas continua rodando - screen -r - volta a última sessão do screen</li>
+<li>exit - fecha as abas até fechar o screen</li>
+<li>screen top - abre uma aba rodando o screen</li>
+</ul>
+<h2 id="jobs-bg-fg-nohup">jobs, bg, fg, nohup</h2>
+<ul>
+<li>foreground - processo que fica associado (preso) ao meu terminal</li>
+<li>background - processo não fica preso ao meu terminal</li>
+<li>firefox &amp;<ul>
+<li>[ID do Job] PID do Processo</li>
+</ul>
+</li>
+<li>jobs -l - mostra os processos em background</li>
+<li>CTRL + Z com o processo rodando em foreground - pausa o processo - stopped</li>
+<li>bg - coloco o último processo em background<ul>
+<li>bg 2 - especifica o job</li>
+</ul>
+</li>
+<li>fg - coloco o último processo em foreground<ul>
+<li>fg 1 - especifica o job</li>
+</ul>
+</li>
+<li>nohup - faz o processo não aceitar o sinal HUP, então ele não é fechado quando sua sessão é finalizada</li>
+<li>nohup firefox &amp;</li>
+<li>joga a saída no nohup.out</li>
+</ul>
+<h2 id="watch-tmux">watch, tmux</h2>
+<ul>
+<li>watch date - executa o date a cada 2 segundos e mostra na tela</li>
+<li>watch -n30 "ps axu | grep firefox" - atualiza a cada 30 segundos</li>
+<li>tmux - semelhante ao screen, mas com mais funções</li>
+<li>tmux<ul>
+<li>ctrl + B + C - cria uma nova janela</li>
+<li>ctrl + B + , - renomeia a janela</li>
+<li>ctrl + B + P - volta uma janela</li>
+<li>ctrl + B + N - próxima janela</li>
+<li>ctrl + B + L - última janela</li>
+<li>crtl + B + 2 - vai pra janela 2</li>
+<li>ctrl + B + W - lista todas as janelas</li>
+<li>ctrl + B + % - cria um novo painel, divide verticalmente</li>
+<li>ctrl + B + direcional - muda pro painel</li>
+<li>exit - fecha o painel</li>
+<li>ctrl + B + " - divide hotizontalmente</li>
+<li>ctrl + B (manter pressionado) + direcional - redimensiona o painel</li>
+<li>ctrl + B + O - rotaciona entre os painéis</li>
+<li>ctrl + B + D - desatachar da minha sessão</li>
+<li>tmux ls - lista as sessões</li>
+<li>tmux attach -t 0 - conectar na sessão 0</li>
+<li>tmux new -s connection - cria uma nova sessão chamada connection</li>
+<li>crtl + B + &amp; - mata a sessão</li>
+<li>tmux kill-session -t 0 - mata a sessão 0</li>
+<li>É possível acessar ao mesmo tempo de 2 pcs a mesma sessão tmux e a sessão fica espelhada</li>
+</ul>
+</li>
+</ul>
 
 
 

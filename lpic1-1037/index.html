@@ -70,6 +70,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#grep-intro-regex" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -446,10 +451,50 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          103.7 - Procurar em arquivos de texto usando expressões regulares
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         103.7 - Procurar em arquivos de texto usando expressões regulares
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#regex-sed" class="md-nav__link">
+    regex, sed
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#regex" class="md-nav__link">
+    Regex
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -645,6 +690,30 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#regex-sed" class="md-nav__link">
+    regex, sed
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#regex" class="md-nav__link">
+    Regex
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -660,7 +729,52 @@
 
 
 
-
+<h1 id="grep-intro-regex">grep, intro regex</h1>
+<ul>
+<li>grep Linux texto.txt - mostra as linhas que contém a palavra Linux</li>
+<li>grep -c Linux texto.txt - mostra a quantidade de ocorrências</li>
+<li>grep -c Linux * - mostra de todos os arquivos</li>
+<li>grep -i Linux texto.txt - ignora case sensitive</li>
+<li>grep -r Linux t* - recursivo</li>
+<li>grep -E - expande para um número maior de expressões regulares</li>
+<li>egrep - igual o grep -e</li>
+<li>fgrep - não aplica expressões regulares</li>
+<li>grep -v Linux texto.txt - exclui as linhas com a palavra Linux</li>
+</ul>
+<h2 id="regex-sed">regex, sed</h2>
+<ul>
+<li>egrep "b[aei]g" texto.txt</li>
+<li>egrep "b[a-u]g" texto.txt</li>
+<li>egrep "^Linux" texto.txt - começo da linha</li>
+<li>egrep "Linux$" texto.txt - final da linha</li>
+<li>egrep -v "^#" texto.txt - tudo que não é um comentário</li>
+<li>egrep "^$" texto.txt - linha em branco</li>
+<li>egrep "b[a-i]g*" texto.txt - o G pode aparecer várias vezes ou nem aparecer</li>
+<li>egrep "b[a-i]g*e" texto.txt - o G pode ou não aparecer, mas depois tem que ter o E.</li>
+<li>egrep "b[a-i]g+" texto.txt - o G tem que aparecer uma ou mais vezes</li>
+<li>egrep "b[a-i]g?" texto.txt - o G deve aparecer 1 vez ou nenhuma</li>
+<li>egrep "b[a-i]g." texto.txt - a partir de 4 caracteres, qualquer coisa do G pra frente</li>
+<li>egrep "b[a-i]g..." texto.txt - tem que ter 3 letras ou mais além do começo da expressão</li>
+<li>egrep "O.Linux" texto.txt - tem que ter um caractere entre o O e o Linux, pode ser espaço</li>
+<li>egrep "O.*Linux" texto.txt - mostra tudo que tenha entre o O e o Linux</li>
+<li>egrep -i "linux." texto.txt</li>
+<li>sed '/Linux/d' texto.txt - deleta toda linha que tiver a palavra Linux</li>
+<li>sed '/^#/d' texto.txt - apaga linhas de comentários</li>
+<li>sed '/[Ll]inux/d' texto.txt</li>
+<li>sed 's/[Ll]inux/Windows' texto.txt - trocar Linux por Windows</li>
+<li>TABELA PROFESSOR</li>
+</ul>
+<h2 id="regex">Regex</h2>
+<ul>
+<li>egrep 'ba{1,3}h' texto.txt - o A deve aparecer de 1 a 3 vezes</li>
+<li>man 7 regex - manual regex</li>
+<li>\b - começo ou fim de uma palavra</li>
+<li>egrep '\bLinux\b' texto.txt - pega somente a palavra Linux</li>
+<li>| - ou<ul>
+<li>egrep '(bag|beg)inner' texto.txt</li>
+</ul>
+</li>
+</ul>
 
 
 

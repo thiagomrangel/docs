@@ -70,6 +70,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#nice-e-renice" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -432,6 +437,8 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
       <a href="./" class="md-nav__link md-nav__link--active">
         103.6 - Modificar a prioridade de execução de um processo
@@ -645,6 +652,8 @@
   
   
   
+    
+  
   
 </nav>
                   </div>
@@ -660,7 +669,24 @@
 
 
 
-
+<h1 id="nice-e-renice">nice e renice</h1>
+<ul>
+<li>nice - define a prioridade de um processo na sua criação</li>
+<li>nice firefox - valor 10 para o firefox</li>
+<li>range - -20 a +19</li>
+<li>quanto menor o valor maior prioridade</li>
+<li>o valor do processo padrão é 0</li>
+<li>nice -n 15 firefox &amp;<ul>
+<li>nice -15 firefox &amp;</li>
+</ul>
+</li>
+<li>top - valor de NI</li>
+<li>ps -la | grep firefox</li>
+<li>renice -n 8 20509 - redefine o nice do processo 20509</li>
+<li>renice 8 20509</li>
+<li>renice -n 5 -u lpi1 - altera a prioridade de todos os processos do usuário</li>
+<li>renice -n 5 -g lpi1 - altera a prioridade de todos os processos do grupo</li>
+</ul>
 
 
 
